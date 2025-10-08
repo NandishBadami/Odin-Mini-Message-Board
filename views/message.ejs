@@ -6,11 +6,13 @@
     <title>Message</title>
 </head>
 <body>
-    <h1>Message</h1>
+    <%- include('heading', {title: title}) %>
+    <hr>
     <ul>
         <li><b>User:</b> <%= message.user %></li>
         <li><b>Text:</b> <%= message.text %></li>
         <li><b>Added:</b> <%= message.added %></li>
     </ul>
+    <hr>
 </body>
 </html>

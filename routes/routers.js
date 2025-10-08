@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/new', (req, res) => {
-    res.render('form');
+    res.render('form', {title: 'Mini Messageboard'});
 });
 
 router.post('/new', (req, res) => {
@@ -29,7 +29,7 @@ router.post('/new', (req, res) => {
 });
 
 router.get('/message/:id', (req, res) => {
-    res.render('message', {message: messages[req.params.id]});
+    res.render('message', {title: 'Mini Messageboard', message: messages[req.params.id]});
 });
 
 module.exports = router;

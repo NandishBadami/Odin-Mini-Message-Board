@@ -6,7 +6,7 @@
     <title><%= title %></title>
 </head>
 <body>
-    <h1><a href="/"><%= title %></a></h1>
+    <%- include('heading', {title: title}) %>
     <a href="/new"><button>New Message</button></a>
     <% for(let i=0;i<messages.length;i++) { %> 
         <hr>
