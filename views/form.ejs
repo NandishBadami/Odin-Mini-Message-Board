@@ -8,11 +8,14 @@
 <body>
     <%- include('heading', {title: title}) %>
     <h1>New Message</h1>
+    <% if (locals.error) { %>
+        <p><%= error %></p>
+    <% } %>
     <form method="post">
         Name: <br>
-        <input type="text" name="user"><br><br>
+        <input type="text" name="username" required><br><br>
         Message: <br>
-        <input type="text" name="text"><br><br>
+        <input type="text" name="message" required><br><br>
         <button type="submit">Submit</button>
     </form>
 </body>

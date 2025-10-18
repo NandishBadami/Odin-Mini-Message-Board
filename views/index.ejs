@@ -6,15 +6,15 @@
     <title><%= title %></title>
 </head>
 <body>
-    <%- include('heading', {title: title}) %>
+    <%- include('heading') %>
     <a href="/new"><button>New Message</button></a>
-    <% for(let i=0;i<messages.length;i++) { %> 
+    <% for(let message of messages) { %> 
         <hr>
         <ul>
-            <li><b>User:</b> <%= messages[i].user %></li>
-            <li><b>Message:</b> <%= messages[i].text %></li>
-            <li><b>Added:</b> <%= messages[i].added %></li><br>
-            <a href="/message/<%= i %>"><button>Open</button></a>
+            <li><b>User:</b> <%= message.username %></li>
+            <li><b>Message:</b> <%= message.message %></li>
+            <li><b>Added:</b> <%= message.added_date %></li><br>
+            <a href="/message/<%= message.id %>"><button>Open</button></a>
         </ul>
         <hr>
     <%};%>
