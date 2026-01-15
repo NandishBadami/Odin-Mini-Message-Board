@@ -1,5 +1,5 @@
 const { Pool } = require('pg');
 
 module.exports = new Pool({
-    connectionString: 'postgresql://postgres:rxrMNnXYIsEQWtYqcBRXkStUGMHjnQoq@switchyard.proxy.rlwy.net:24982/railway'
+    connectionString: 'postgresql://mini_meaaage_user:NVRAnF0wyh8UonfYKn4KwbzTAkh60I6N@dpg-d5k7qscoud1c73ed9scg-a/mini_meaaage'
 });
